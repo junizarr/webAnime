@@ -61,3 +61,17 @@ function showCard(anime) {
   </div>
   </div>`;
 }
+
+window.addEventListener('load', function () {
+  fetch(`https://api.jikan.moe/v4/anime?q=ninja hatori&limit=12`)
+    .then((res) => res.json())
+    .then((data) => {
+      const animes = data.data;
+      let card = '';
+      for (const anime of animes) {
+        card += showCard(anime);
+      }
+      const content = document.getElementById('content');
+      content.innerHTML = card;
+    });
+});
