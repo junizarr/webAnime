@@ -1,0 +1,155 @@
+body {
+  padding: 0px;
+  background-color: #06283d;
+  margin: 0px auto;
+  width: 1000px;
+  font-family: comics sans ms;
+}
+
+header {
+  width: 100%;
+  background-color: #47b5ff;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-bottom: 4px solid #aebdca;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: -5px auto 15px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  font-size: 17px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+nav ul li:hover {
+  background-color: #937dc2;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #937dc2;
+  padding: 10px 12px;
+  border-radius: 5px;
+}
+
+form input.search {
+  width: 250px;
+  margin: 5px -5px 0 20px;
+}
+
+main {
+  width: 100%;
+  background-color: #7895b2;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+main #content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 25%;
+  height: auto;
+  /* grid-column: span 8; */
+  margin: 10px 20px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.head-card img {
+  width: 100%;
+  height: 300px;
+}
+
+.body-card {
+  padding: 10px 15px;
+  min-height: 200px;
+}
+
+.body-card h3 {
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #47b5ff;
+  margin: 0 auto 20px;
+  border-top: 4px solid #aebdca;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+  main {
+    flex-direction: column;
+  }
+  main aside,
+  main #content {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .card {
+    width: 80%;
+  }
+  header,
+  footer {
+    margin: 0;
+  }
+
+  nav {
+    text-align: center;
+  }
+}
